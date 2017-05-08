@@ -5,7 +5,7 @@ namespace Winiarzapp.Core.Data
     /// <summary>
     /// Intefejs pozwalający na wiele implementacji miejsca, w którym będą przechowywane dane dotyczące przepisów. 
     /// (np. FileRecipeSource, SQLRecipeSource, RobotWithPencilRecipeSource, etc.).
-    /// </summary
+    /// </summary>
     interface IRecipeSource
     {
         /// <summary>
