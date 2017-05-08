@@ -5,7 +5,7 @@ namespace Winiarzapp.Core.Data
     /// <summary>
     /// Składnik przepisu.
     /// Gdy zostanie raz utworzony nie można zmieniać jego właściwości. 
-    /// </summary
+    /// </summary>
     public class Ingredient
     {
         /// <param name="name">Nazwa składnika.</param>

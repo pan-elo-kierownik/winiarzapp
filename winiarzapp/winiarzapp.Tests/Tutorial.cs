@@ -14,7 +14,7 @@ namespace winiarzapp.Tests
     {
         /// <summary>
         /// Przykładowy test. Sprawdza czy 1 + 2 równa się 3. W ten sposób będą wyglądały wszystkie automatyczne testy.
-        /// </summary
+        /// </summary>
         [TestMethod]
         public void Test1()
         {
@@ -31,7 +31,7 @@ namespace winiarzapp.Tests
 
         /// <summary>
         /// Test sprawdzający, czy metoda rzuca wyjątek.
-        /// </summary
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(NotImplementedException))]
         public void Test2()

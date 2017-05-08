@@ -6,32 +6,32 @@ namespace Winiarzapp.Core.Data
     {
         /// <summary>
         /// Zwraca <c>true</c> gdy przepis jest poprawny. 
-        /// </summary
+        /// </summary>
         bool Validate();
 
         /// <summary>
         /// Nazwa przepisu. 
-        /// </summary
+        /// </summary>
         string Name { get; set; }
 
         /// <summary>
         /// Opis przepisu.
-        /// </summary
+        /// </summary>
         string Description { get; set; }
 
         /// <summary>
         /// Składniki przepisu.
-        /// </summary
+        /// </summary>
         IEnumerable<Ingredient> Ingredients { get; }
 
         /// <summary>
         /// Dodaj składnik.
-        /// </summary
+        /// </summary>
         void AddIngredient(Ingredient ingredient);
 
         /// <summary>
         /// Usuń składnik.
-        /// </summary
+        /// </summary>
         void RemoveIngredient(Ingredient ingredient);
     }
 }

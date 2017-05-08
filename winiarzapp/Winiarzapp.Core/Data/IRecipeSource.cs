@@ -10,24 +10,24 @@ namespace Winiarzapp.Core.Data
     {
         /// <summary>
         /// Zwróc wszystkie przepisy.
-        /// </summary
+        /// </summary>
         IEnumerable<Recipe> GetRecipes();
 
         /// <summary>
         /// Metoda pozwalająca sprawdzić czy dany przepis jest dodany do źródła.
-        /// </summary
+        /// </summary>
         /// <param name="recipe">Przepis, którego istnienie w źródle chcemy sprawdzić.</param>
         bool HasRecipe(Recipe recipe);
 
         /// <summary>
         /// Usuń przepis ze źródła.
-        /// </summary
+        /// </summary>
         /// <param name="recipe">Usuwany przepis.</param>
         bool RemoveRecipe(Recipe recipe);
 
         /// <summary>
         /// Dodaj przepis do źródła.
-        /// </summary
+        /// </summary>
         /// <param name="recipe">Przepis, który chcemy dodać do źródła.</param>
         void AddRecipe(Recipe recipe);
     }

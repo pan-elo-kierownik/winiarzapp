@@ -5,7 +5,7 @@ namespace Winiarzapp.Core.Data
 {
     /// <summary>
     /// Model przepisu na wino. Zawiera listę składników oraz ich proporcje.
-    /// </summary
+    /// </summary>
     public class Recipe : IRecipe
     {
         public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
