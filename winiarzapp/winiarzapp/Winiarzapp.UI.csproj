@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Winiarzapp.Core\Winiarzapp.Core.csproj">
+      <Project>{1076ab49-785c-4246-a893-56766e64d901}</Project>
+      <Name>Winiarzapp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
