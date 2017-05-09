@@ -3,11 +3,21 @@
 namespace Winiarzapp.Core.Data
 {
     /// <summary>
+    /// Lista przepisów uległa zmianie.
+    /// </summary>
+    public delegate void RecipesChangedHandler();
+
+    /// <summary>
     /// Intefejs pozwalający na wiele implementacji miejsca, w którym będą przechowywane dane dotyczące przepisów. 
     /// (np. FileRecipeSource, SQLRecipeSource, RobotWithPencilRecipeSource, etc.).
     /// </summary>
-    interface IRecipeSource
+    public interface IRecipeSource
     {
+        /// <summary>
+        /// Zdarzenie wywołane gdy lista przepisów się zmieni.
+        /// </summary>
+        event RecipesChangedHandler RecipesChanged;
+
         /// <summary>
         /// Zwróc wszystkie przepisy.
         /// </summary>
