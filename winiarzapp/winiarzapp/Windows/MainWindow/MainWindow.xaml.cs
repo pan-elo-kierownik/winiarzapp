@@ -17,7 +17,7 @@ namespace winiarzapp
 
             recipeSource = new FileRecipeSource();
 
-            // Inicializacja kontrolek.
+            // Inicjalizacja kontrolek.
             RecipeList recipeList = FindName("RecipeList") as RecipeList;
             recipeList.Initialize(recipeSource);
 
