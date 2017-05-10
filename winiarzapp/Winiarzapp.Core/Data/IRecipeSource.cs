@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Winiarzapp.Core.Data
 {
@@ -11,7 +12,7 @@ namespace Winiarzapp.Core.Data
     /// Intefejs pozwalający na wiele implementacji miejsca, w którym będą przechowywane dane dotyczące przepisów. 
     /// (np. FileRecipeSource, SQLRecipeSource, RobotWithPencilRecipeSource, etc.).
     /// </summary>
-    public interface IRecipeSource
+    public interface IRecipeSource : IDisposable
     {
         /// <summary>
         /// Zdarzenie wywołane gdy lista przepisów się zmieni.
@@ -19,26 +20,33 @@ namespace Winiarzapp.Core.Data
         event RecipesChangedHandler RecipesChanged;
 
         /// <summary>
-        /// Zwróc wszystkie przepisy.
+        /// Zwróc wszystkie rekordy przepisów.
         /// </summary>
-        IEnumerable<Recipe> GetRecipes();
+        IEnumerable<RecipeRecord> GetRecords();
 
         /// <summary>
-        /// Metoda pozwalająca sprawdzić czy dany przepis jest dodany do źródła.
+        /// Metoda pozwalająca sprawdzić czy dany przepis jest dodany do jakiegoś z istniejących rekordów.
         /// </summary>
         /// <param name="recipe">Przepis, którego istnienie w źródle chcemy sprawdzić.</param>
         bool HasRecipe(Recipe recipe);
 
         /// <summary>
+        /// Znajdź rekord, w którym znajduje się podany przepis.
+        /// </summary>
+        /// <param name="recipe">Przepis, którego rekord chcemy otrzymać.</param>
+        RecipeRecord FindRecord(Recipe recipe);
+
+        /// <summary>
         /// Usuń przepis ze źródła.
         /// </summary>
         /// <param name="recipe">Usuwany przepis.</param>
-        bool RemoveRecipe(Recipe recipe);
+        void RemoveRecipe(Recipe recipe);
 
         /// <summary>
-        /// Dodaj przepis do źródła.
+        /// Dodaj przepis do źródła. Jeśli rekord nie zostanie podany, to zostanie utworzony nowy.
         /// </summary>
         /// <param name="recipe">Przepis, który chcemy dodać do źródła.</param>
-        void AddRecipe(Recipe recipe);
+        /// <param name="record">Rekord, do którego dodajemy rewizję.</param>
+        RecipeRecord AddRecipe(Recipe recipe, RecipeRecord record = null);
     }
 }

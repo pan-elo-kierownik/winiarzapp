@@ -7,12 +7,20 @@ namespace Winiarzapp.Core.Data
     {
         public event RecipesChangedHandler RecipesChanged;
 
-        public void AddRecipe(Recipe recipe)
+        /// <summary>
+        /// Pochodzi z interfejsu IDisposable. Zostanie wywołane przed zamknięciem programu i powinno zapisać stan obiektu (np. na dysku).
+        /// </summary>
+        public void Dispose()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Recipe> GetRecipes()
+        public RecipeRecord FindRecord(Recipe recipe)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<RecipeRecord> GetRecords()
         {
             throw new NotImplementedException();
         }
@@ -22,9 +30,20 @@ namespace Winiarzapp.Core.Data
             throw new NotImplementedException();
         }
 
-        public bool RemoveRecipe(Recipe recipe)
+        public void RemoveRecipe(Recipe recipe)
         {
             throw new NotImplementedException();
         }
+
+        public void AddRecipe(Recipe recipe)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RecipeRecord AddRecipe(Recipe recipe, RecipeRecord record = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

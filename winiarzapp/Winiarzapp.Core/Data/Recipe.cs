@@ -6,25 +6,22 @@ namespace Winiarzapp.Core.Data
     /// <summary>
     /// Model przepisu na wino. Zawiera listę składników oraz ich proporcje.
     /// </summary>
-    public class Recipe : IRecipe
+    [Serializable]
+    public class Recipe : IComparable
     {
         public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
         public IEnumerable<Ingredient> Ingredients => throw new NotImplementedException();
 
-        public void AddIngredient(Ingredient ingredient)
+        public Recipe(Ingredient[] ingredients, string name, string description)
         {
-            throw new NotImplementedException();
+            //TODO: Sprawdź czy proporcje przepisów sumują się do 1.0
+            //TODO: Zapisz składniki.
         }
 
-        public void RemoveIngredient(Ingredient ingredient)
+        public int CompareTo(object obj)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool Validate()
-        {
+            //TODO: Sprawdź, czy argument jest tym przepisem.
             throw new NotImplementedException();
         }
     }

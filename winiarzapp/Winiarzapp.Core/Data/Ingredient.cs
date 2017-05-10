@@ -6,6 +6,7 @@ namespace Winiarzapp.Core.Data
     /// Składnik przepisu.
     /// Gdy zostanie raz utworzony nie można zmieniać jego właściwości. 
     /// </summary>
+    [Serializable]
     public class Ingredient
     {
         /// <param name="name">Nazwa składnika.</param>
@@ -18,10 +19,10 @@ namespace Winiarzapp.Core.Data
             Unit = unit;
         }
 
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public double Ratio { get; private set; }
-        public Unit Unit { get; private set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double Ratio { get; set; }
+        public Unit Unit { get; set; }
     }
 
     public enum Unit
