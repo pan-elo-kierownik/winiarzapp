@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Controls;
+using winiarzapp.Windows.MainWindow.Components;
 using Winiarzapp.Core.Data;
 
 namespace winiarzapp.Components
@@ -21,6 +22,15 @@ namespace winiarzapp.Components
             this.recipeSource = recipeSource;
 
             //TODO: Nasłuchuj i reaguj na zmiany w źródle przepisów.
+            //TODO: Nasłuchuj i reaguj na zmiany frazy filtrującej wyniki.
+
+            StackPanel stackPanel = FindName("StackPanel") as StackPanel;
+
+            // Dodanie pustych elementów żeby zapełnić miejsce. Do usunięcia.
+            stackPanel.Children.Add(new ListElement());
+            stackPanel.Children.Add(new ListElement());
+            stackPanel.Children.Add(new ListElement());
+            stackPanel.Children.Add(new ListElement());
         }
 
         /// <summary>

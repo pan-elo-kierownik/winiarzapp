@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\MainWindow\Components\ListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow\Components\RecipeList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
     </Compile>
     <Compile Include="Windows\MainWindow\Components\AppControls.xaml.cs">
       <DependentUpon>AppControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow\Components\ListElement.xaml.cs">
+      <DependentUpon>ListElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow\Components\RecipeList.xaml.cs">
       <DependentUpon>RecipeList.xaml</DependentUpon>
