@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Windows.Controls;
-using winiarzapp.Windows.MainWindow.Components;
 using Winiarzapp.Core.Data;
 
-namespace winiarzapp.Components
+namespace winiarzapp.UI.Windows.MainWindow.Components
 {
     /// <summary>
     /// Lista przepisów.

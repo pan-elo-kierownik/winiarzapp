@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using Winiarzapp.Core.Data;
 
-namespace winiarzapp.Windows.MainWindow.Components
+namespace winiarzapp.UI.Windows.MainWindow.Components
 {
     /// <summary>
     /// Pojedynczy element listy. Powinien móc wyświetlać podstawowe informacje o przepisie (Nazwa oraz liczba zapisanych nastawień)

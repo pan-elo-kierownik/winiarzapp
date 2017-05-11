@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace winiarzapp.Components
+namespace winiarzapp.UI.Windows.MainWindow.Components
 {
     /// <summary>
     /// Kontrolka służąca za nawigację. Powinna posiadać 3 przyciski: Pomoc, Historia oraz Dodaj przepis.

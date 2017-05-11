@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace winiarzapp.Components
+namespace winiarzapp.UI.Windows.MainWindow.Components
 {
     public delegate void QueryChangedHandler(string query);
 

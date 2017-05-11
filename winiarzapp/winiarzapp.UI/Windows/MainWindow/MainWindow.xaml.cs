@@ -1,8 +1,8 @@
 ﻿using System.Windows;
-using winiarzapp.Components;
+using winiarzapp.UI.Windows.MainWindow.Components;
 using Winiarzapp.Core.Data;
 
-namespace winiarzapp
+namespace winiarzapp.UI
 {
     /// <summary>
     /// Główny ekran. Umieszczone na nim są komponenty przedstawiające listę przepisów, narzędzia filtrujące oraz przyciski nawigacyjne.

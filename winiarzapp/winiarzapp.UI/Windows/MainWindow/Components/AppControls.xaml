@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="winiarzapp.Components.AppControls"
+﻿<UserControl x:Class="winiarzapp.UI.Windows.MainWindow.Components.AppControls"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:winiarzapp.Components"
+             xmlns:local="clr-namespace:winiarzapp.UI.Windows.MainWindow.Components"
              mc:Ignorable="d" d:DesignWidth="194.467" Height="96.367"
              Background="BlanchedAlmond">
     <TextBlock HorizontalAlignment="Left" Margin="47,33,0,0" TextWrapping="Wrap" Text="Pomoc, historia, dodaj przepis" VerticalAlignment="Top" Height="32" Width="110"/>

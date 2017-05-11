@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winiarzapp.UI", "winiarzapp\Winiarzapp.UI.csproj", "{B214D772-CD49-410E-BC27-6FF0AF77A67F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winiarzapp.UI", "winiarzapp.UI\Winiarzapp.UI.csproj", "{B214D772-CD49-410E-BC27-6FF0AF77A67F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winiarzapp.Tests", "winiarzapp.Tests\Winiarzapp.Tests.csproj", "{65CF1EE7-B7FE-4D02-947A-64B7DD00FC6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winiarzapp.Core", "Winiarzapp.Core\Winiarzapp.Core.csproj", "{1076AB49-785C-4246-A893-56766E64D901}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winiarzapp.Core", "winiarzapp.Core\Winiarzapp.Core.csproj", "{1076AB49-785C-4246-A893-56766E64D901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

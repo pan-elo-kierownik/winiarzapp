@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:winiarzapp"
-        xmlns:Components="clr-namespace:winiarzapp.Components" x:Class="winiarzapp.MainWindow"
+        xmlns:Components="clr-namespace:winiarzapp.UI.Windows.MainWindow.Components" x:Class="winiarzapp.UI.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
