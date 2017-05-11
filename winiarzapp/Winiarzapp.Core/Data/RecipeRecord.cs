@@ -23,9 +23,9 @@ namespace Winiarzapp.Core.Data
         }
 
         /// <summary>
-        /// Dodaj nową rewizję przepisu.
+        /// Dodaj nową rewizję przepisu. True, jeśli dodano pomyślnie, false jeśli identyczny przepis już istnieje.
         /// </summary>
-        public void AddNewRevision(Recipe recipe)
+        public bool AddNewRevision(Recipe recipe)
         {
             throw new NotImplementedException();
         }
