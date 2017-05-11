@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using Winiarzapp.Core.Data;
 
 namespace winiarzapp.Windows.MainWindow.Components
 {
@@ -10,6 +11,11 @@ namespace winiarzapp.Windows.MainWindow.Components
         public ListElement()
         {
             InitializeComponent();
+        }
+
+        public void RenderRecord(RecipeRecord record)
+        {
+            //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
         }
     }
 }
