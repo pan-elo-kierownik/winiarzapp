@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Winiarzapp.Core.Services
+namespace Winiarzapp.UI.Services
 {
     public class HelperService
     {
@@ -8,6 +8,14 @@ namespace Winiarzapp.Core.Services
         /// Załaduj i wyświetl plik pomocy (*.chm).
         /// </summary>
         public static void ShowHelp()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Otwórz okno "History" jako "dialog".
+        /// </summary>
+        public static void ShowHistory()
         {
             throw new NotImplementedException();
         }

@@ -12,9 +12,11 @@ namespace Winiarzapp.Core.Data
         public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public IEnumerable<Ingredient> Ingredients => throw new NotImplementedException();
+        public Guid UniqueID { get; set; }
 
         public Recipe(Ingredient[] ingredients, string name, string description)
         {
+            UniqueID = Guid.NewGuid();
             //TODO: Sprawdź czy proporcje przepisów sumują się do 1.0
             //TODO: Zapisz składniki.
         }

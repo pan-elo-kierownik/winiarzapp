@@ -13,7 +13,7 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
             InitializeComponent();
         }
 
-        public void RenderRecord(RecipeRecord record)
+        public void RenderRecord(Recipe recipe)
         {
             //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
         }

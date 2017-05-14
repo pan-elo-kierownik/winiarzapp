@@ -40,13 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Batch.cs" />
+    <Compile Include="Data\FileRecipeHistory.cs" />
     <Compile Include="Data\FileRecipeSource.cs" />
     <Compile Include="Data\Ingredient.cs" />
+    <Compile Include="Data\IRecipeHistory.cs" />
     <Compile Include="Data\IRecipeSource.cs" />
     <Compile Include="Data\Recipe.cs" />
-    <Compile Include="Data\RecipeRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\HelperService.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

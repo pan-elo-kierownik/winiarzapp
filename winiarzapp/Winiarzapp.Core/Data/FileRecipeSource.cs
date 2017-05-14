@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Winiarzapp.Core.Data
 {
@@ -15,12 +14,7 @@ namespace Winiarzapp.Core.Data
             throw new NotImplementedException();
         }
 
-        public RecipeRecord FindRecord(Recipe recipe)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<RecipeRecord> GetRecords()
+        public void AddRecipe(Recipe recipe)
         {
             throw new NotImplementedException();
         }
@@ -30,20 +24,19 @@ namespace Winiarzapp.Core.Data
             throw new NotImplementedException();
         }
 
+        public bool HasRecipe(Guid recipeGuid)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RemoveRecipe(Recipe recipe)
         {
             throw new NotImplementedException();
         }
 
-        public void AddRecipe(Recipe recipe)
+        public void RemoveRecipe(Guid recipeGuid)
         {
             throw new NotImplementedException();
         }
-
-        public RecipeRecord AddRecipe(Recipe recipe, RecipeRecord record = null)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }
