@@ -75,7 +75,7 @@ namespace Winiarzapp.Core.Data
         }
         
         /// <summary>
-        /// Metoda pomocnicza do odczytu zapisanej historii nastawów z zapisanego pliku xml. 
+        /// Metoda pomocnicza do odczytu zapisanej historii nastawów z pliku xml. 
         /// </summary>
         
 
