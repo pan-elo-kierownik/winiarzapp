@@ -17,9 +17,7 @@ namespace Winiarzapp.Core.Data
         private List<Batch> History; 
         
 
-        /// <summary>
-        ///
-        /// </summary>
+      
         public IEnumerable<Batch> Batches
         {
            get
