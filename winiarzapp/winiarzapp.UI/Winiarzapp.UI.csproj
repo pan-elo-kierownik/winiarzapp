@@ -135,6 +135,10 @@
       <Name>Winiarzapp.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="images\add.png" />
+    <Resource Include="images\help.png" />
+    <Resource Include="images\history.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

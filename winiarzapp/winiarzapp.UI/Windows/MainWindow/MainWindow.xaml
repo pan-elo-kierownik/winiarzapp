@@ -9,7 +9,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Components:SearchBar HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="499" Margin="10,0,0,0"/>
-        <Components:AppControls HorizontalAlignment="Left" Height="82" Margin="334,10,0,0" VerticalAlignment="Top" Width="175"/>
+        <Components:AppControls HorizontalAlignment="Left" Height="32" Margin="334,10,0,0" VerticalAlignment="Top" Width="174" Loaded="AppControls_Loaded"/>
         <Components:RecipeList x:Name="RecipeList" HorizontalAlignment="Left" Height="148" Margin="0,173,-0.333,-0.333" VerticalAlignment="Top" Width="519"/>
     </Grid>
 </Window>

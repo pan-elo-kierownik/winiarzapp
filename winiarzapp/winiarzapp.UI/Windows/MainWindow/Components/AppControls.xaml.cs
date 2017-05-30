@@ -11,5 +11,18 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         {
             InitializeComponent();
         }
+
+        private void Button_Click_Help(object sender, System.Windows.RoutedEventArgs e) //naciśnięcie przycisku help
+        {
+
+        }
+        private void Button_Click_History(object sender, System.Windows.RoutedEventArgs e) //naciśnięcie przycisku history
+        {
+
+        }
+        private void Button_Click_Add(object sender, System.Windows.RoutedEventArgs e) //naciśnięcie przycisku add
+        {
+
+        }
     }
 }

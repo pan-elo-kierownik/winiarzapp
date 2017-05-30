@@ -23,5 +23,6 @@ namespace winiarzapp.UI
 
             //TODO: Powiązać eventy/handlery
         }
+
     }
 }
