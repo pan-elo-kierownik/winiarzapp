@@ -21,6 +21,7 @@ namespace winiarzapp.UI.Windows.History
     {
         public History()
         {
+            // test
             InitializeComponent();
         }
     }
