@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using winiarzapp.UI.Windows.MainWindow.Components;
 using Winiarzapp.Core.Data;
 
@@ -24,5 +25,13 @@ namespace winiarzapp.UI
             //TODO: Powiązać eventy/handlery
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+
+            recipeSource.Dispose();
+
+            App.Current.Shutdown();
+        }
     }
 }

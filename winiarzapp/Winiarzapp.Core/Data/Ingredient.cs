@@ -9,6 +9,8 @@ namespace Winiarzapp.Core.Data
     [Serializable]
     public class Ingredient
     {
+        public Ingredient() { }
+
         /// <param name="name">Nazwa składnika.</param>
         /// <param name="ratio">Część nastawu (0.00 - 1.00) którą jest dany składnik.</param>
         public Ingredient(string name, string description, double ratio, Unit unit)
