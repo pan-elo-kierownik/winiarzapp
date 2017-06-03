@@ -136,9 +136,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\add.png" />
-    <Resource Include="images\help.png" />
-    <Resource Include="images\history.png" />
+    <Resource Include="images\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\help.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\history.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
