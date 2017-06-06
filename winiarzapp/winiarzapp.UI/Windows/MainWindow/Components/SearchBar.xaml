@@ -7,5 +7,5 @@
              mc:Ignorable="d" 
              d:DesignHeight="37.902" d:DesignWidth="300"
              Background="Gray">
-    <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="SearchQuery_TextChanged"/>
+    <TextBox HorizontalAlignment="Stretch" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="probaaa" VerticalAlignment="Top" TextChanged="SearchQuery_TextChanged"/>
 </UserControl>
