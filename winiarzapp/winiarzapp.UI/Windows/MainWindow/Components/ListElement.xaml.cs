@@ -21,7 +21,7 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         public void RenderRecord(Recipe recipe)
         {
 			this.recipe = recipe;
-			
+			 
 			Label label = FindName("LabelListElement") as Label;
 
 			label.Content = recipe;
