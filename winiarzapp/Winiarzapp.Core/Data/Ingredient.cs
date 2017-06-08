@@ -17,7 +17,7 @@ namespace Winiarzapp.Core.Data
         {
             Name = name ?? throw new ArgumentNullException("Podana nazwa nie może być nullem!");
             Description = description;
-            Ratio = ratio;
+            Ratio = ratio; // ignorowane w wypadku, gdy składnik jest statyczny
             Unit = unit;
         }
 

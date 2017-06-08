@@ -86,9 +86,10 @@ namespace Winiarzapp.Core.Data
         public bool ValidateIngredients(Ingredient[] ingredients)
         {
             double sum = 0.0;
-            for (int i = 0; i < ingredients.Length; i++)
+            foreach (var i in ingredients)
             {
-                sum += ingredients[i].Ratio;
+                if (i.Unit != Unit.STATIC)
+                    sum += i.Ratio;
             }
             if (sum == 1.0) return true;
             return false;
