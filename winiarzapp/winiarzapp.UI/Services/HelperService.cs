@@ -19,5 +19,10 @@ namespace Winiarzapp.UI.Services
         {
             throw new NotImplementedException();
         }
+        
+        public static void ShowRecipeCreator() //metoda wyświetlająca kreator przepisów
+        {
+            throw new NotImplementedException();
+        }
     }
 }

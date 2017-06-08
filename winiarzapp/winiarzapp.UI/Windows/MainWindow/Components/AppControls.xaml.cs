@@ -22,7 +22,7 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         }
         private void Button_Click_Add(object sender, System.Windows.RoutedEventArgs e) //naciśnięcie przycisku add
         {
-
+            Winiarzapp.UI.Services.HelperService.ShowRecipeCreator(); //wywołanie metody wyświetlającej kreator przepisów
         }
     }
 }
