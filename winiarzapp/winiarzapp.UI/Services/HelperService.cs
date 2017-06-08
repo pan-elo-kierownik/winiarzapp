@@ -1,4 +1,6 @@
 ﻿using System;
+using winiarzapp.UI.Windows.RecipeCreator;
+using Winiarzapp.Core.Data;
 
 namespace Winiarzapp.UI.Services
 {
@@ -19,10 +21,12 @@ namespace Winiarzapp.UI.Services
         {
             throw new NotImplementedException();
         }
-        
-        public static void ShowRecipeCreator() //metoda wyświetlająca kreator przepisów
+
+        public static void ShowRecipeCreator(IRecipeSource recipeSource) //metoda wyświetlająca kreator przepisów
         {
-            throw new NotImplementedException();
+            RecipeCreator rc = new RecipeCreator();
+            rc.Initialize(recipeSource);
+            rc.ShowDialog();
         }
     }
 }
