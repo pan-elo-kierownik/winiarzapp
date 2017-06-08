@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using Winiarzapp.Core.Data;
 
 namespace winiarzapp.UI.Windows.MainWindow.Components
 {
@@ -7,9 +8,12 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
     /// </summary>
     public partial class AppControls : UserControl
     {
-        public AppControls()
+        private IRecipeSource recipeSource;
+
+        public void Initialize(IRecipeSource recipeSource)
         {
             InitializeComponent();
+            this.recipeSource = recipeSource;
         }
 
         private void Button_Click_Help(object sender, System.Windows.RoutedEventArgs e) //naciśnięcie przycisku help
@@ -22,7 +26,7 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         }
         private void Button_Click_Add(object sender, System.Windows.RoutedEventArgs e) //naciśnięcie przycisku add
         {
-            Winiarzapp.UI.Services.HelperService.ShowRecipeCreator(); //wywołanie metody wyświetlającej kreator przepisów
+            Winiarzapp.UI.Services.HelperService.ShowRecipeCreator(recipeSource); //wywołanie metody wyświetlającej kreator przepisów
         }
     }
 }

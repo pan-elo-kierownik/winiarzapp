@@ -22,6 +22,8 @@ namespace winiarzapp.UI
             RecipeList recipeList = FindName("RecipeList") as RecipeList;
             recipeList.Initialize(recipeSource);
 
+            appControls.Initialize(recipeSource);
+
             //TODO: Powiązać eventy/handlery
         }
 
