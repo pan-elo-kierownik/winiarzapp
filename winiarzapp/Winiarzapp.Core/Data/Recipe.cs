@@ -10,10 +10,13 @@ namespace Winiarzapp.Core.Data
     [Serializable]
     public class Recipe : IComparable, IEqualityComparer<Recipe>, INotifyPropertyChanged
     {
+
+        public Recipe() { }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string name)
         {
-            if(PropertyChanged != null)
+            if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }
@@ -45,8 +48,8 @@ namespace Winiarzapp.Core.Data
                 }
             }
         }
-        IEnumerable<Ingredient> ingredients;
-        public IEnumerable<Ingredient> Ingredients
+        List<Ingredient> ingredients;
+        public List<Ingredient> Ingredients
         {
             get { return this.ingredients; }
             set
@@ -67,7 +70,7 @@ namespace Winiarzapp.Core.Data
             this.Description = description;
 
             if (!ValidateIngredients(ingredients)) throw new Exception("Proporcje składników nie sumują się do 1.0.");
-            this.Ingredients = ingredients;
+            this.Ingredients = new List<Ingredient>(ingredients);
         }
 
         public int CompareTo(object obj)
@@ -124,7 +127,7 @@ namespace Winiarzapp.Core.Data
 
             bool searchIngredients = false;
 
-            var enumerator = this.Ingredients.GetEnumerator(); 
+            var enumerator = this.Ingredients.GetEnumerator();
             do
             {
                 var obj = enumerator.Current;
@@ -132,7 +135,7 @@ namespace Winiarzapp.Core.Data
             }
             while (enumerator.MoveNext());
 
-            return regex.IsMatch(this.Name) || regex.IsMatch(this.Description) 
+            return regex.IsMatch(this.Name) || regex.IsMatch(this.Description)
                     || searchIngredients;
         }
     }
