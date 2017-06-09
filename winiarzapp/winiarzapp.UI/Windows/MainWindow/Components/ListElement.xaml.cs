@@ -26,7 +26,7 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 
 			label1.Content = recipe.Name;
 			
-			//TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
+			 //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
 		}
     }
 }
