@@ -21,11 +21,11 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         public void RenderRecord(Recipe recipe)
         {
 			this.recipe = recipe;
-			 
-			Label label = FindName("LabelListElement") as Label;
-
-			label.Content = recipe;
 		
+			Label label1 = FindName("LabelListElement") as Label;
+
+			label1.Content = recipe.Name;
+			
 			//TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
 		}
     }
