@@ -15,18 +15,20 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 
 		public ListElement()
         {
-            InitializeComponent();
-        }
+
+			InitializeComponent();
+
+			//LabelListElement Nazwa konrtrolki label
+		
+		}
 
         public void RenderRecord(Recipe recipe)
         {
 			this.recipe = recipe;
-		
-			Label label1 = FindName("LabelListElement") as Label;
 
-			label1.Content = recipe.Name;
-			
-			 //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
+			LabelListElement.Content = recipe.Name;
+
+			//TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
 		}
-    }
+	}
 }
