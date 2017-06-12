@@ -11,5 +11,6 @@ namespace Winiarzapp.Core.Data
         public Recipe recipe;
         public DateTime createdAt;
         public string Description;
+        public double LitersOfProduct;
     }
 }

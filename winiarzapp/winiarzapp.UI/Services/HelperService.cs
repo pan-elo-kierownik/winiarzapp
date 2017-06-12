@@ -8,6 +8,18 @@ namespace Winiarzapp.UI.Services
 {
     public class HelperService
     {
+        private static IRecipeSource recipeSource;
+        private static IRecipeHistory recipeHistory;
+
+        /// <summary>
+        /// Załaduj i wyświetl plik pomocy (*.chm).
+        /// </summary>
+        public static void Initialize(IRecipeSource recipeSource, IRecipeHistory recipeHistory)
+        {
+            HelperService.recipeSource = recipeSource;
+            HelperService.recipeHistory = recipeHistory;
+        }
+
         /// <summary>
         /// Załaduj i wyświetl plik pomocy (*.chm).
         /// </summary>
@@ -24,16 +36,16 @@ namespace Winiarzapp.UI.Services
             throw new NotImplementedException();
         }
 
-        public static void ShowRecipeCreator(IRecipeSource recipeSource) //metoda wyświetlająca kreator przepisów
+        public static void ShowRecipeCreator() //metoda wyświetlająca kreator przepisów
         {
             RecipeCreator rc = new RecipeCreator();
             rc.Initialize(recipeSource);
             rc.ShowDialog();
         }
 
-        public static void ShowVineCreator() //metoda wyświetlająca kreator wina
+        public static void ShowVineCreator(Recipe recipe) //metoda wyświetlająca kreator wina
         {
-            VineCreator vc = new VineCreator();
+            VineCreator vc = new VineCreator(recipe, recipeHistory);
             Warning wg = new Warning();
             //vc.Initialize(recipeSource);
             wg.ShowDialog();

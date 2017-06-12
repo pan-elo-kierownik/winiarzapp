@@ -25,11 +25,22 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 
             StackPanel stackPanel = FindName("StackPanel") as StackPanel;
 
+
+            Recipe r = new Recipe(new Ingredient[] {
+                new Ingredient("Test Ingredient", "Bababa", 0.5, Unit.LITER),
+                new Ingredient("Test Ingredient2", "Asdfg", 0.5, Unit.KILOGRAM)
+            }, "Test Recipe", "Awesome recipe!");
+
+
+
             // Dodanie pustych elementów żeby zapełnić miejsce. Do usunięcia.
-            stackPanel.Children.Add(new ListElement());
-            stackPanel.Children.Add(new ListElement());
-            stackPanel.Children.Add(new ListElement());
-            stackPanel.Children.Add(new ListElement());
+            for (int i = 0; i < 5; i++)
+            {
+                var x = new ListElement();
+                x.RenderRecord(r);
+                stackPanel.Children.Add(x);
+            }
+
         }
 
         /// <summary>
