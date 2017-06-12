@@ -7,6 +7,6 @@
              mc:Ignorable="d"
              d:DesignHeight="50" d:DesignWidth="300" Width="298">
   <Grid Background="cyan">
-    <Label x:Name="LabelListElement"  Content="hey" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="278"  Background="White"/>
+    <Label x:Name="LabelListElement"  Content="hey" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="278"  Background="White" MouseDoubleClick="LabelListElement_MouseDoubleClick"/>
   </Grid>
 </UserControl>
