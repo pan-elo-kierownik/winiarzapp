@@ -28,5 +28,10 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 			
 			 //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
 		}
+        
+        private void LabelListElement_MouseDoubleClick(object sender, System.Windows.RoutedEventArgs e) //podwójne kliknięcie powodujące otwarcie Kreatora wina
+        {
+            Winiarzapp.UI.Services.HelperService.ShowVineCreator(); //wywołanie metody wyświetlającej okienko z kreatorem wina
+        }
     }
 }
