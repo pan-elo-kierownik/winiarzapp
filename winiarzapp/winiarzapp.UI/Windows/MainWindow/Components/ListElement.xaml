@@ -1,12 +1,12 @@
 ﻿<UserControl x:Class="winiarzapp.UI.Windows.MainWindow.Components.ListElement"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:winiarzapp.UI.Windows.MainWindow.Components"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="50" d:DesignWidth="300" Width="298">
-    <Grid >
-        <Label Content="Item" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Height="32" Width="85"/>
-    </Grid>
+  <Grid Background="cyan">
+    <Label x:Name="LabelListElement"  Content="hey" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="278"  Background="White"/>
+  </Grid>
 </UserControl>
