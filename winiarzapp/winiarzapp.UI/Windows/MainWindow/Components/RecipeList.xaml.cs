@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Controls;
 using Winiarzapp.Core.Data;
 
@@ -10,6 +11,8 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
     public partial class RecipeList : UserControl
     {
         IRecipeSource recipeSource;
+        StackPanel stackPanel;
+        string query;
 
         public RecipeList()
         {
@@ -22,25 +25,23 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 
             //TODO: Nasłuchuj i reaguj na zmiany w źródle przepisów.
             //TODO: Nasłuchuj i reaguj na zmiany frazy filtrującej wyniki.
+            stackPanel = FindName("StackPanel") as StackPanel;
 
-            StackPanel stackPanel = FindName("StackPanel") as StackPanel;
+            recipeSource.RecipesChanged += IRecipeSource_RecipesChanged;
+        }
 
+        private void IRecipeSource_RecipesChanged()
+        {
+            Filter(query);
+            // nie wiedziałem co tutaj wrzucić, więc wrzuciłem ponowne wykonanie wyszukiwania, żeby 
+            // przeszukać zmienioną bazę przepisów
+        }
 
-            Recipe r = new Recipe(new Ingredient[] {
-                new Ingredient("Test Ingredient", "Bababa", 0.5, Unit.LITER),
-                new Ingredient("Test Ingredient2", "Asdfg", 0.5, Unit.KILOGRAM)
-            }, "Test Recipe", "Awesome recipe!");
+        private void SearchBar_QueryChanged(string query)
+        {
+            this.query = query;
 
-
-
-            // Dodanie pustych elementów żeby zapełnić miejsce. Do usunięcia.
-            for (int i = 0; i < 5; i++)
-            {
-                var x = new ListElement();
-                x.RenderRecord(r);
-                stackPanel.Children.Add(x);
-            }
-
+            Filter(query);
         }
 
         /// <summary>
@@ -48,7 +49,17 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         /// </summary>
         public void Filter(string query)
         {
-            throw new NotImplementedException();
+            stackPanel.Children.Clear();
+
+            foreach (Recipe recipe in recipeSource.Recipes)
+            {
+               if (recipe.Name.ToLower().Contains(query.ToLower()))
+               {
+                    ListElement listElement = new ListElement();
+                    listElement.RenderRecord(recipe);
+                    stackPanel.Children.Add(listElement);
+                }
+            }
         }
     }
 }
