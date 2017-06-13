@@ -12,7 +12,9 @@ namespace Winiarzapp.Core.Data
 
         public event RecipesChangedHandler RecipesChanged;
 
-        public List<Recipe> recipes = new List<Recipe>();
+        private List<Recipe> recipes = new List<Recipe>();
+
+        public List<Recipe> Recipes { get { return recipes; } }
 
 
         /// <summary>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="winiarzapp.UI.Windows.Warning.Warning"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:winiarzapp.UI.Windows.Warning"
+        mc:Ignorable="d"
+        Title="UWAGA" Height="184.326" Width="483.386" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Żeby zminimalizować ryzyko powstania octu winnego upewnij się, że:&#xD;&#xA;-naczynie jest sterylne&#xD;&#xA;-używasz wysokiej jakości owoców/soku&#xD;&#xA;-drożdże zostały dodane według instrukcji na opakowaniu" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top" Height="100" Width="406"/>
+        <Button Content="OK, rozumiem ryzyko" HorizontalAlignment="Left" Margin="342,115,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_Close_Warning"/>
+
+    </Grid>
+</Window>

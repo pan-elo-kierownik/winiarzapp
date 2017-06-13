@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Components:SearchBar HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="499" Margin="10,0,0,0"/>
-        <Components:AppControls HorizontalAlignment="Left" Height="32" Margin="334,10,0,0" VerticalAlignment="Top" Width="174"/>
-        <Components:RecipeList x:Name="RecipeList" HorizontalAlignment="Left" Height="148" Margin="0,173,-0.333,-0.333" VerticalAlignment="Top" Width="519"/>
+        <Components:SearchBar Height="60" VerticalAlignment="Top" x:Name="searchBar"/>
+        <Components:AppControls x:Name="appControls" HorizontalAlignment="Right" Height="32" VerticalAlignment="Top" Width="174" Margin="0,12,10,0"/>
+        <Components:RecipeList x:Name="RecipeList" Margin="0,60,0,0"/>
     </Grid>
 </Window>
