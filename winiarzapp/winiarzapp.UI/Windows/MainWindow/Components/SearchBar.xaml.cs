@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace winiarzapp.UI.Windows.MainWindow.Components
 {
@@ -13,7 +12,6 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         public SearchBar()
         {
             InitializeComponent();
-            QueryChanged += new QueryChangedHandler(Query);
         }
 
         /// <summary>
@@ -27,12 +25,8 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
             TextBox textBox = (TextBox)sender;
             textBox.MaxLength = 20;
 
-            Query(textBox.Text);
-        }
-
-        static void Query(string s)
-        {
-            //nie wiem
+            if (QueryChanged != null)
+                QueryChanged(textBox.Text);
         }
     }
 }

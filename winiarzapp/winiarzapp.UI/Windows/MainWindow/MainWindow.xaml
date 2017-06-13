@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Components:SearchBar Height="60" VerticalAlignment="Top" x:Name="searchBar"/>
+        <Components:SearchBar x:Name="_SearchBar" Height="60" VerticalAlignment="Top"/>
         <Components:AppControls x:Name="appControls" HorizontalAlignment="Right" Height="32" VerticalAlignment="Top" Width="174" Margin="0,12,10,0"/>
         <Components:RecipeList x:Name="RecipeList" Margin="0,60,0,0"/>
     </Grid>
