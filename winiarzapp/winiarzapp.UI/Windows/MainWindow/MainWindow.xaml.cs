@@ -2,6 +2,7 @@
 using System.Windows;
 using winiarzapp.UI.Windows.MainWindow.Components;
 using Winiarzapp.Core.Data;
+using Winiarzapp.UI.Services;
 
 namespace winiarzapp.UI
 {
@@ -11,22 +12,22 @@ namespace winiarzapp.UI
     public partial class MainWindow : Window
     {
         IRecipeSource recipeSource;
+        IRecipeHistory recipeHistory;
 
         public MainWindow()
         {
             InitializeComponent();
 
             recipeSource = new FileRecipeSource();
+            recipeHistory = new FileRecipeHistory();
+
+            HelperService.Initialize(recipeSource, recipeHistory);
 
             // Inicjalizacja kontrolek.
             RecipeList recipeList = FindName("RecipeList") as RecipeList;
             recipeList.Initialize(recipeSource);
-            
+
             _SearchBar.QueryChanged += recipeList.Filter;
-
-            appControls.Initialize(recipeSource);
-
-            //TODO: Powiązać eventy/handlery
         }
 
         protected override void OnClosed(EventArgs e)
