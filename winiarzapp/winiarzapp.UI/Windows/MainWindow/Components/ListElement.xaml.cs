@@ -15,19 +15,15 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 
         public ListElement()
         {
-            InitializeComponent();
-        }
+			    InitializeComponent();	
+		    }
 
         public void RenderRecord(Recipe recipe)
         {
-            this.recipe = recipe;
-
-            Label label1 = FindName("LabelListElement") as Label;
-
-            label1.Content = recipe.Name;
-
-            //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
-        }
+          this.recipe = recipe;
+          //LabelListElement Nazwa konrtrolki label
+          LabelListElement.Content = recipe.Name;
+		    }
 
         private void LabelListElement_MouseDoubleClick(object sender, System.Windows.RoutedEventArgs e) //podwójne kliknięcie powodujące otwarcie Kreatora wina
         {
