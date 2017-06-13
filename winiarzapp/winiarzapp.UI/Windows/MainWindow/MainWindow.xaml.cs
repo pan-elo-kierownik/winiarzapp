@@ -35,6 +35,7 @@ namespace winiarzapp.UI
             base.OnClosed(e);
 
             recipeSource.Dispose();
+            recipeHistory.Dispose();
 
             App.Current.Shutdown();
         }
