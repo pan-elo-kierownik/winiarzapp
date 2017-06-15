@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:winiarzapp.UI.Windows.History"
         mc:Ignorable="d"
-        Title="History" Height="300" Width="300">
-    <Grid>
-        
-    </Grid>
+        Title="History" Height="300" Width="720">
+    <ListView Margin="10" Name="historyView">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="Przepis" Width="120" DisplayMemberBinding="{Binding recipe.Name}" />
+                <GridViewColumn Header="Opis" Width="250" DisplayMemberBinding="{Binding Description}" />
+                <GridViewColumn Header="Nastaw (L)" Width="100" DisplayMemberBinding="{Binding LitersOfProduct}" />
+                <GridViewColumn Header="Data" Width="150" DisplayMemberBinding="{Binding createdAt}" />
+            </GridView>
+        </ListView.View>
+    </ListView>
 </Window>

@@ -1,4 +1,5 @@
 ﻿using System;
+using winiarzapp.UI.Windows.History;
 using winiarzapp.UI.Windows.RecipeCreator;
 using winiarzapp.UI.Windows.VineCreator;
 using winiarzapp.UI.Windows.Warning;
@@ -33,7 +34,9 @@ namespace Winiarzapp.UI.Services
         /// </summary>
         public static void ShowHistory()
         {
-            throw new NotImplementedException();
+            History h = new History();
+            h.Initialize(recipeHistory);
+            h.ShowDialog();
         }
 
         public static void ShowRecipeCreator() //metoda wyświetlająca kreator przepisów
