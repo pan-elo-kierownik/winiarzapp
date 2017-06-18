@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:winiarzapp"
         xmlns:Components="clr-namespace:winiarzapp.UI.Windows.MainWindow.Components" x:Class="winiarzapp.UI.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Vinetou" Height="350" Width="525" Icon="/winiarzapp.UI;component/images/vinetou_ico.png">
     <Grid>
-        <Components:SearchBar x:Name="_SearchBar" Height="60" VerticalAlignment="Top" Margin="0,0,174,0"/>
-        <Components:AppControls x:Name="appControls" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="174" Margin="0,0,-0.333,0"/>
-        <Components:RecipeList x:Name="RecipeList" Margin="0,60,0,0"/>
+        <Components:SearchBar x:Name="_SearchBar" Height="40" VerticalAlignment="Top" Margin="0,0,174,0"/>
+        <Components:AppControls x:Name="appControls" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top" Width="174" Margin="0,0,-0.333,0"/>
+        <Components:RecipeList x:Name="RecipeList" Margin="0,40,0,0"/>
     </Grid>
 </Window>

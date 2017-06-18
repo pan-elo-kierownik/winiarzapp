@@ -29,7 +29,7 @@ namespace winiarzapp.UI.Windows.VineCreator
 
             ingredientComboBox.Items.Add("Nastaw");
 
-            foreach (var i in recipe.Ingredients)
+            foreach (var i in recipe.Ingredients.Where(i => i.Unit != Unit.STATIC))
                 ingredientComboBox.Items.Add(i.Name);
 
             ingredientComboBox.SelectedIndex = 0;
@@ -58,7 +58,6 @@ namespace winiarzapp.UI.Windows.VineCreator
         {
             updateIngredients();
         }
-
 
 
         private void Button_Click_Nastaw(object sender, RoutedEventArgs e) // przycisk zamykający okno kreatora win
@@ -109,13 +108,13 @@ namespace winiarzapp.UI.Windows.VineCreator
                 switch (ingredient.Unit)
                 {
                     case Unit.STATIC:
-                        ammount = ingredient.Name + " szt.";
+                        ammount = ingredient.Ratio * 100 + " szt.";
                         break;
                     case Unit.LITER:
-                        ammount = liters * ingredient.Ratio + " L";
+                        ammount = String.Format("{0:N2}", liters * ingredient.Ratio) + " L";
                         break;
                     case Unit.KILOGRAM:
-                        ammount = liters * ingredient.Ratio + " Kg";
+                        ammount = String.Format("{0:N2}", liters * ingredient.Ratio) + " Kg";
                         break;
                 }
 
@@ -123,7 +122,7 @@ namespace winiarzapp.UI.Windows.VineCreator
             }
 
             finalLitersOfProduct = liters;
-            finalDisplay.Content = $"Otrzymasz {liters} L nastawu.";
+            finalDisplay.Content = $"Otrzymasz {String.Format("{0:N2}", liters)} L nastawu.";
         }
 
         private void ingredientsList_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
