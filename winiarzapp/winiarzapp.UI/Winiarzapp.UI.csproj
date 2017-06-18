@@ -171,5 +171,9 @@
     <Folder Include="Windows\RecipeCreator\Components\" />
     <Folder Include="Windows\VineCreator\Components\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\vinetou.png" />
+    <Resource Include="images\vinetou_ico.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:winiarzapp.UI.Windows.History"
         mc:Ignorable="d"
-        Title="History" Height="300" Width="720">
+        Title="Vinetou: Historia nastawów" Height="300" Width="720" Icon="/winiarzapp.UI;component/images/vinetou_ico.png">
     <ListView Margin="10" Name="historyView">
         <ListView.View>
             <GridView>
