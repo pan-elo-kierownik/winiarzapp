@@ -21,7 +21,11 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
 
         private void SearchQuery_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //TODO: W momencie, gdy zmienia się zawartość pola wyszukiwania powinno zostać wywołane wydarzenie (ISearchBar::QueryChanged)
+            TextBox textBox = (TextBox)sender;
+            textBox.MaxLength = 20;
+
+            if (QueryChanged != null)
+                QueryChanged(textBox.Text ?? "");
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using Winiarzapp.Core.Data;
 
 namespace winiarzapp.UI.Windows.MainWindow.Components
@@ -10,6 +9,8 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
     public partial class RecipeList : UserControl
     {
         IRecipeSource recipeSource;
+        StackPanel stackPanel;
+        string query;
 
         public RecipeList()
         {
@@ -19,17 +20,23 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         public void Initialize(IRecipeSource recipeSource)
         {
             this.recipeSource = recipeSource;
+            stackPanel = FindName("StackPanel") as StackPanel;
 
-            //TODO: Nasłuchuj i reaguj na zmiany w źródle przepisów.
-            //TODO: Nasłuchuj i reaguj na zmiany frazy filtrującej wyniki.
+            recipeSource.RecipesChanged += IRecipeSource_RecipesChanged;
 
-            StackPanel stackPanel = FindName("StackPanel") as StackPanel;
+            Filter("");
+        }
 
-            // Dodanie pustych elementów żeby zapełnić miejsce. Do usunięcia.
-            stackPanel.Children.Add(new ListElement());
-            stackPanel.Children.Add(new ListElement());
-            stackPanel.Children.Add(new ListElement());
-            stackPanel.Children.Add(new ListElement());
+        private void IRecipeSource_RecipesChanged()
+        {
+            Filter(query);
+        }
+
+        private void SearchBar_QueryChanged(string query)
+        {
+            this.query = query;
+
+            Filter(query);
         }
 
         /// <summary>
@@ -37,7 +44,18 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         /// </summary>
         public void Filter(string query)
         {
-            throw new NotImplementedException();
+            stackPanel.Children.Clear();
+
+            foreach (Recipe recipe in recipeSource.Recipes)
+            {
+                if (string.IsNullOrWhiteSpace(query) || recipe.Name.ToLower().Contains(query.ToLower()))
+                {
+                    ListElement listElement = new ListElement();
+                    listElement.RenderRecord(recipe);
+                    stackPanel.Children.Add(listElement);
+                }
+            }
+            stackPanel.Height = stackPanel.Children.Count * 50;
         }
     }
 }

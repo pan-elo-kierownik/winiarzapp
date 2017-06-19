@@ -12,7 +12,9 @@ namespace Winiarzapp.Core.Data
 
         public event RecipesChangedHandler RecipesChanged;
 
-        public List<Recipe> recipes = new List<Recipe>();
+        private List<Recipe> recipes = new List<Recipe>();
+
+        public List<Recipe> Recipes { get { return recipes; } }
 
 
         /// <summary>
@@ -69,7 +71,7 @@ namespace Winiarzapp.Core.Data
         public void AddRecipe(Recipe recipe)
         {
             recipes.Add(recipe);
-            RecipesChanged();
+            FireRecipesChanged();
         }
 
         public bool HasRecipe(Recipe recipe)
@@ -85,13 +87,19 @@ namespace Winiarzapp.Core.Data
         public void RemoveRecipe(Recipe recipe)
         {
             recipes.RemoveAll(r => r.Equals(recipe));
-            RecipesChanged();
+            FireRecipesChanged();
         }
 
         public void RemoveRecipe(Guid recipeGuid)
         {
             recipes.RemoveAll(r => r.UniqueID.Equals(recipeGuid));
-            RecipesChanged();
+            FireRecipesChanged();
+        }
+
+        private void FireRecipesChanged()
+        {
+            if (RecipesChanged != null)
+                RecipesChanged();
         }
     }
 }

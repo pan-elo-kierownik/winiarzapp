@@ -6,16 +6,28 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
     /// <summary>
     /// Pojedynczy element listy. Powinien móc wyświetlać podstawowe informacje o przepisie (Nazwa oraz liczba zapisanych nastawień)
     /// </summary>
+    /// 
+
     public partial class ListElement : UserControl
     {
+
+        Recipe recipe;
+
         public ListElement()
         {
-            InitializeComponent();
-        }
+			    InitializeComponent();	
+		    }
 
         public void RenderRecord(Recipe recipe)
         {
-            //TODO: Zaktualizuj wygląd elementu by odzwierciedlał rekord podany jako argument.
+          this.recipe = recipe;
+          //LabelListElement Nazwa konrtrolki label
+          LabelListElement.Content = recipe.Name;
+		    }
+
+        private void LabelListElement_MouseDoubleClick(object sender, System.Windows.RoutedEventArgs e) //podwójne kliknięcie powodujące otwarcie Kreatora wina
+        {
+            Winiarzapp.UI.Services.HelperService.ShowVineCreator(recipe); //wywołanie metody wyświetlającej okienko z kreatorem wina
         }
     }
 }

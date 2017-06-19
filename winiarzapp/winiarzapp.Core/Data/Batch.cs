@@ -8,8 +8,9 @@ namespace Winiarzapp.Core.Data
     [Serializable]
     public class Batch
     {
-        public Recipe recipe;
-        public DateTime createdAt;
-        public string Description;
+        public Recipe recipe { get; set; }
+        public DateTime createdAt { get; set; }
+        public string Description { get; set; }
+        public double LitersOfProduct { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Winiarzapp.Core.Data
 {
@@ -48,5 +49,10 @@ namespace Winiarzapp.Core.Data
         /// <param name="recipe">Przepis, który chcemy dodać do źródła.</param>
         /// <param name="record">Rekord, do którego dodajemy rewizję.</param>
         void AddRecipe(Recipe recipe);
+
+        /// <summary>
+        /// Zwróć listę przepisów.
+        /// </summary>
+        List<Recipe> Recipes { get; }
     }
 }
