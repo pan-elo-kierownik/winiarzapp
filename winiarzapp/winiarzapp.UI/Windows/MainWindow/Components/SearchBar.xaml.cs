@@ -19,9 +19,11 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         /// </summary>
         public event QueryChangedHandler QueryChanged;
 
+        /// <summary>
+        /// Metoda wywoływana kiedy w SearchBarze zmieniony jest tekst.
+        /// </summary>
         private void SearchQuery_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //TODO: W momencie, gdy zmienia się zawartość pola wyszukiwania powinno zostać wywołane wydarzenie (ISearchBar::QueryChanged)
             TextBox textBox = (TextBox)sender;
             textBox.MaxLength = 20;
 
