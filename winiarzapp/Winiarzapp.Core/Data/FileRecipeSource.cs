@@ -57,7 +57,7 @@ namespace Winiarzapp.Core.Data
         }
 
         /// <summary>
-        /// Metoda pomocnicza służąca do deserializacji stanu przepisów z dysku.
+        /// Zwraca domyślną listę przepisów.
         /// </summary>
         private List<Recipe> ReadInitialDataset()
         {
@@ -72,7 +72,6 @@ namespace Winiarzapp.Core.Data
             }
 
             XmlSerializer serializer = new XmlSerializer(typeof(List<Recipe>));
-
             using (var reader = new StringReader(xml))
             {
                 List<Recipe> result = (List<Recipe>)serializer.Deserialize(reader);
