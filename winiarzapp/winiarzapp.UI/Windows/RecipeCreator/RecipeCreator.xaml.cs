@@ -5,7 +5,7 @@ using Winiarzapp.Core.Data;
 namespace winiarzapp.UI.Windows.RecipeCreator
 {
     /// <summary>
-    /// Interaction logic for RecipeCreator.xaml
+    /// Okno służące do dodawania nowych przepisów.
     /// </summary>
     public partial class RecipeCreator : Window
     {
