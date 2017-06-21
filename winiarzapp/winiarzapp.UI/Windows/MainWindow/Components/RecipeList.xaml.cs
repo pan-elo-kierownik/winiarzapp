@@ -27,11 +27,17 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
             Filter("");
         }
 
+        /// <summary>
+        /// Metoda wywoływana kiedy zmienia się baza przepisów.
+        /// </summary>
         private void IRecipeSource_RecipesChanged()
         {
             Filter(query);
         }
 
+        /// <summary>
+        /// Metoda wywoływana kiedy w SearchBarze zmieniony jest tekst.
+        /// </summary>
         private void SearchBar_QueryChanged(string query)
         {
             this.query = query;
@@ -40,7 +46,7 @@ namespace winiarzapp.UI.Windows.MainWindow.Components
         }
 
         /// <summary>
-        /// Przebuduj listę by wyświetlać elementy pasujące do podanej frazy.
+        /// Metoda filtrująca przepisy z bazy.
         /// </summary>
         public void Filter(string query)
         {
