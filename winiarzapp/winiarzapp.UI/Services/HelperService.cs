@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.IO;
+using System.Reflection;
+using System.Windows.Forms;
 using winiarzapp.UI.Windows.History;
 using winiarzapp.UI.Windows.RecipeCreator;
 using winiarzapp.UI.Windows.VineCreator;
@@ -26,7 +28,23 @@ namespace Winiarzapp.UI.Services
         /// </summary>
         public static void ShowHelp()
         {
-            throw new NotImplementedException();
+            var assembly = Assembly.GetExecutingAssembly();
+            var helpResourceName = "winiarzapp.UI.guide.chm";
+
+            var helpPath = Path.Combine(Path.GetTempPath(), "guide.chm");
+
+            if (!File.Exists(helpPath))
+            {
+                using (Stream stream = assembly.GetManifestResourceStream(helpResourceName))
+                {
+                    using (FileStream fileStream = File.Create(helpPath))
+                    {
+                        stream.CopyTo(fileStream); // Brak buforowanego kopiowania. Tak, wiem. To tylko ~240 KB - w dodatku jednorazowo. 
+                    }
+                }
+            }
+
+            Help.ShowHelp(null, helpPath);
         }
 
         /// <summary>
