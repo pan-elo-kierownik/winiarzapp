@@ -9,7 +9,7 @@ namespace Winiarzapp.Core.Data
 {
     public class FileRecipeSource : IRecipeSource
     {
-        private const string FILE_PATH = @"C:\temp\recipes.xml";
+        private readonly string FILE_PATH;
 
         public event RecipesChangedHandler RecipesChanged;
 
@@ -31,6 +31,12 @@ namespace Winiarzapp.Core.Data
         /// </summary>
         public FileRecipeSource()
         {
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // ściezka do %APPDATA%
+            folder = Path.Combine(folder, "vinnetou"); // Folder z danymi aplikacji
+            Directory.CreateDirectory(folder); // upewnij się, że istnieje
+
+            FILE_PATH = Path.Combine(folder, "recipes.xml"); // gotowa ścieżka
+
             if (File.Exists(FILE_PATH))
             {
                 recipes = DeserializeList<Recipe>();
